@@ -30,7 +30,7 @@ public class ReadFile {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally{
+        } finally {
             bufferedReader.close();
             inReader.close();
             in.close();

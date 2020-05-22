@@ -10,8 +10,8 @@ public interface NumberInterface {
     int numberOperate(int a, int b);
 
     // 定义静态默认方法
-    static int operate(int a,int b,NumberInterface numberInterface) {
-        return numberInterface.numberOperate(a,b);
+    static int operate(int a, int b, NumberInterface numberInterface) {
+        return numberInterface.numberOperate(a, b);
     }
 
     // 定义默认方法

@@ -12,11 +12,11 @@ import com.wenky.设计模式.桥接模式.datebase.Oracle;
  * @create: 2019-08-09 19:04
  */
 public class Test {
-  public static void main(String[] args) {
-    //
-    Database database = new Oracle();
-    Conver pdfConver = new PdfConver();
-    database.setConver(pdfConver);
-    database.conversion();
-  }
+    public static void main(String[] args) {
+        //
+        Database database = new Oracle();
+        Conver pdfConver = new PdfConver();
+        database.setConver(pdfConver);
+        database.conversion();
+    }
 }

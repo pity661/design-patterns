@@ -7,8 +7,8 @@ package com.wenky.类的不同类型;
  * @create: 2018-12-11 10:53
  **/
 public class Test {
-  public static void main(String[] args) {
-    //
-      Entity entity = new Entity();
-  }
+    public static void main(String[] args) {
+        //
+        Entity entity = new Entity();
+    }
 }

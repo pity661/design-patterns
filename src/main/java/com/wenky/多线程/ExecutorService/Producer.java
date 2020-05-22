@@ -11,12 +11,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author: wenky huwenqi@panda-fintech.com
  * @create: 2019-01-16 21:36
  **/
-public class Producer implements Runnable{
+public class Producer implements Runnable {
 
-    private volatile boolean      isRunning               = true;
+    private volatile boolean isRunning = true;
     private BlockingQueue queue;
-    private static AtomicInteger count                   = new AtomicInteger();
-    private static final int      DEFAULT_RANGE_FOR_SLEEP = 1000;
+    private static AtomicInteger count = new AtomicInteger();
+    private static final int DEFAULT_RANGE_FOR_SLEEP = 1000;
 
     public Producer(BlockingQueue queue) {
         this.queue = queue;

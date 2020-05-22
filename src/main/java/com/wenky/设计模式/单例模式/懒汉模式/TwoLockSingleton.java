@@ -15,6 +15,7 @@ public class TwoLockSingleton {
 
     /**
      * 只有第一次初始化对象的时候才会创建锁，锁住类对象，之后每一次调用返回同一个方法
+     *
      * @return
      */
     public static TwoLockSingleton getInstance() {

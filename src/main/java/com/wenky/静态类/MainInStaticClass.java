@@ -26,6 +26,7 @@ public class MainInStaticClass {
     class CommonMain {
         // private static String staticParam = "111"; // 非静态内部类中不能定义静态成员变量和方法
         private String param = "普通内部类全局变量"; //优先使用内部类的局部变量
+
         void main() {
             String param = "普通内部类方法变量";
             System.out.println(param); // 内部类方法变量
@@ -35,11 +36,11 @@ public class MainInStaticClass {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         new MainInStaticClass().print();
     }
 
-    public void print(){
+    public void print() {
         System.out.println("main in static inner class");
     }
 }

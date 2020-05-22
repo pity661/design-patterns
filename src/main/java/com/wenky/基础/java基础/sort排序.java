@@ -28,7 +28,7 @@ public class sort排序 {
         };
         list.sort(comparator);
 
-        Comparator<Integer> comparator1 =  Comparator.comparing(Integer::intValue);
+        Comparator<Integer> comparator1 = Comparator.comparing(Integer::intValue);
         list.sort(comparator1);
 
         // 按照int数值排序，如果null排在最前面 倒序
@@ -39,9 +39,9 @@ public class sort排序 {
         list.stream().sorted(comparator);
 
         // 多个比较条件
-        Comparator<Integer> comparator3 =  Comparator.comparing(Integer::intValue).thenComparing(Integer::compareTo);
+        Comparator<Integer> comparator3 = Comparator.comparing(Integer::intValue).thenComparing(Integer::compareTo);
         list.sort(comparator3);
 
-        Collections.sort(list,comparator1);
+        Collections.sort(list, comparator1);
     }
 }

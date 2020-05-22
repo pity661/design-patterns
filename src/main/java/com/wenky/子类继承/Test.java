@@ -7,7 +7,7 @@ package com.wenky.子类继承;
  * @create: 2019-03-11 10:04
  **/
 public class Test {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Child child = new Child();
         child.println();
     }

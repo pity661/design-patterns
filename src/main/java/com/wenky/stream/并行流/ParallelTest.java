@@ -16,6 +16,7 @@ public class ParallelTest {
 
     /**
      * 最慢
+     *
      * @param list
      * @return
      */
@@ -25,6 +26,7 @@ public class ParallelTest {
 
     /**
      * 最快
+     *
      * @param list
      * @return
      */
@@ -34,15 +36,17 @@ public class ParallelTest {
 
     /**
      * 初始值必须是0,否则结果不准确
+     *
      * @param list
      * @return
      */
     public static int sumInteger(List<Integer> list) {
-        return list.parallelStream().reduce(0, (a,b) -> a+=b);
+        return list.parallelStream().reduce(0, (a, b) -> a += b);
     }
 
     /**
      * 慢
+     *
      * @param list
      * @return
      */
@@ -52,6 +56,7 @@ public class ParallelTest {
 
     /**
      * 快
+     *
      * @param list
      * @return
      */
@@ -59,39 +64,39 @@ public class ParallelTest {
         return list.parallelStream().sorted().collect(Collectors.toList());
     }
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
-        for (int i=0;i<100000;i++) {
+        for (int i = 0; i < 100000; i++) {
             list.add(i);
         }
 
-      long start = System.currentTimeMillis();
-      System.out.println(baseSumInt(list));
-      long end = System.currentTimeMillis();
-      System.out.println("baseSumInt:" + (end - start));
+        long start = System.currentTimeMillis();
+        System.out.println(baseSumInt(list));
+        long end = System.currentTimeMillis();
+        System.out.println("baseSumInt:" + (end - start));
 
         long start1 = System.currentTimeMillis();
         System.out.println(sumInt(list));
         long end1 = System.currentTimeMillis();
         System.out.println("sumInt:" + (end1 - start1));
 
-      long start2 = System.currentTimeMillis();
-      System.out.println(sumInteger(list));
-      long end2 = System.currentTimeMillis();
-      System.out.println("sumInteger:" + (end2 - start2));
+        long start2 = System.currentTimeMillis();
+        System.out.println(sumInteger(list));
+        long end2 = System.currentTimeMillis();
+        System.out.println("sumInteger:" + (end2 - start2));
 
 
-      Collections.shuffle(list);
-      long start3 = System.currentTimeMillis();
-      baseSort(list);
-      long end3 = System.currentTimeMillis();
-      System.out.println("baseSort:" + (end3 - start3));
+        Collections.shuffle(list);
+        long start3 = System.currentTimeMillis();
+        baseSort(list);
+        long end3 = System.currentTimeMillis();
+        System.out.println("baseSort:" + (end3 - start3));
 
-      Collections.shuffle(list);
-      long start4 = System.currentTimeMillis();
-      sort(list);
-      long end4 = System.currentTimeMillis();
-      System.out.println("sort:" + (end4 - start4));
+        Collections.shuffle(list);
+        long start4 = System.currentTimeMillis();
+        sort(list);
+        long end4 = System.currentTimeMillis();
+        System.out.println("sort:" + (end4 - start4));
 
-  }
+    }
 }

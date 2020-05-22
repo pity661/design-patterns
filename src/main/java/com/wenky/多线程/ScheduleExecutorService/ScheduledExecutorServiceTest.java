@@ -14,16 +14,17 @@ import java.util.concurrent.TimeUnit;
  */
 public class ScheduledExecutorServiceTest {
 
-  public static void main(String[] args) {
-    StopWatch stopWatch = new StopWatch();
-    stopWatch.start();
-    ScheduledExecutorService scheduledExecutor = Executors.newSingleThreadScheduledExecutor();
-    scheduledExecutor.schedule(
-        () -> {
-          stopWatch.stop();
-          System.out.println("我是一只猪" + stopWatch.getTime());
-        },
-        10,
-        TimeUnit.SECONDS);
-  }
+    public static void main(String[] args) {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
+        ScheduledExecutorService scheduledExecutor = Executors.newSingleThreadScheduledExecutor();
+        scheduledExecutor.schedule(
+                () -> {
+                    stopWatch.stop();
+                    System.out.println("我是一只猪" + stopWatch.getTime());
+                },
+                10,
+                TimeUnit.SECONDS);
+        scheduledExecutor.shutdown();
+    }
 }

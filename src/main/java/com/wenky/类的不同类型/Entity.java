@@ -6,7 +6,7 @@ package com.wenky.类的不同类型;
  * @author: wenky huwenqi@panda-fintech.com
  * @create: 2018-12-11 10:51
  **/
-public class Entity extends Base{
+public class Entity extends Base {
     private String str;
     protected Integer inte;
     public Long pub;

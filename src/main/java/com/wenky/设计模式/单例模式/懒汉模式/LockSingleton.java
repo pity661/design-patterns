@@ -10,7 +10,7 @@ public class LockSingleton {
     /**
      * 缺陷:
      * 每次调用方法的时候都会把对象给锁住
-     *
+     * <p>
      * 一次锁住了一个方法,只要像TwoLock一样改进只锁住其中的new语句就行了
      */
     private static LockSingleton instance;

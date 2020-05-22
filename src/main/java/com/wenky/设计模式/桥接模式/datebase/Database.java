@@ -9,11 +9,11 @@ import com.wenky.设计模式.桥接模式.conver.Conver;
  * @create: 2019-08-09 18:37
  */
 public abstract class Database {
-  public Conver conver;
+    public Conver conver;
 
-  public void setConver(Conver conver) {
-    this.conver = conver;
-  }
+    public void setConver(Conver conver) {
+        this.conver = conver;
+    }
 
-  public abstract void conversion();
+    public abstract void conversion();
 }

@@ -13,15 +13,15 @@ import java.util.stream.Collectors;
  * @create: 2019-08-10 14:05
  */
 public class MinByTest {
-  public static void main(String[] args) {
-    //
-    List<String> stringList = Arrays.asList("Hello", "Java", "JDK", "Android", "Kotlin", "World");
+    public static void main(String[] args) {
+        //
+        List<String> stringList = Arrays.asList("Hello", "Java", "JDK", "Android", "Kotlin", "World");
 
-    Comparator comparator = Comparator.comparingInt(String::length);
-    Comparator comparator1 = Comparator.comparing(String::length);
+        Comparator comparator = Comparator.comparingInt(String::length);
+        Comparator comparator1 = Comparator.comparing(String::length);
 
-    Optional<String> optional =
-        (Optional<String>) stringList.stream().collect(Collectors.<String>minBy(comparator1));
-    System.out.println(optional.get());
-  }
+        Optional<String> optional =
+                (Optional<String>) stringList.stream().collect(Collectors.<String>minBy(comparator1));
+        System.out.println(optional.get());
+    }
 }

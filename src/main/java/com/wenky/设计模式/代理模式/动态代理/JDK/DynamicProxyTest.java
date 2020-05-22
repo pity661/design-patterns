@@ -15,7 +15,7 @@ package com.wenky.设计模式.代理模式.动态代理.JDK;
  **/
 public class DynamicProxyTest {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         DynamicProxy dynamicProxy = new DynamicProxy();
         DynamicProxyInterface dynamicProxyForImpl = (DynamicProxyInterface)
                 dynamicProxy.dynamicBindImplToProxyClass(new DynamicProxyImpl());

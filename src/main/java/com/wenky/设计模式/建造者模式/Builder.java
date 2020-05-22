@@ -7,17 +7,17 @@ package com.wenky.设计模式.建造者模式;
  * @create: 2019-05-28 14:40
  **/
 public class Builder {
-     class Student {
+    class Student {
         String name;
         int number;
         String sex;
         int age;
         String school;
 
-        public Student () {
+        public Student() {
         }
 
-        public Student (StudentBuilder builder) {
+        public Student(StudentBuilder builder) {
             this.age = builder.getAge();
             this.name = builder.getName();
             this.number = builder.getNumber();
@@ -83,16 +83,16 @@ public class Builder {
         }
     }
 
-  public static void main(String[] args) {
-      /**
-       * 1.将Student和StudentBuilder均设为静态内部类
-       */
-      //Student student = new Student.StudentBuilder().setAge(1).build();
+    public static void main(String[] args) {
+        /**
+         * 1.将Student和StudentBuilder均设为静态内部类
+         */
+        //Student student = new Student.StudentBuilder().setAge(1).build();
 
-      /**
-       * 2.Student和StudentBuilder均为非静态内部类
-       */
-      Student student =new Builder().new Student().new StudentBuilder().setAge(1).build();
-      System.out.println(student.age);
-  }
+        /**
+         * 2.Student和StudentBuilder均为非静态内部类
+         */
+        Student student = new Builder().new Student().new StudentBuilder().setAge(1).build();
+        System.out.println(student.age);
+    }
 }

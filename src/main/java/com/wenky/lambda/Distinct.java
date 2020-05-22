@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 public class Distinct {
 
     public static void distinct() {
-    Stream.of("1", "2", "3", "4", "1").distinct().forEach(s -> System.out.println(s));
+        Stream.of("1", "2", "3", "4", "1").distinct().forEach(s -> System.out.println(s));
     }
 
 }

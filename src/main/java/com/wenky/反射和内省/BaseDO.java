@@ -17,7 +17,7 @@ public class BaseDO {
     public BaseDO() {
     }
 
-    public BaseDO(String str, Boolean bo,Integer in,Long lo) {
+    public BaseDO(String str, Boolean bo, Integer in, Long lo) {
         this.str = str;
         this.bo = bo;
         this.in = in;

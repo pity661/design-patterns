@@ -37,7 +37,7 @@ public class IntegerOperate {
     }
 
     public static void printInfo(Integer num) {
-      // 负数的补码形式
+        // 负数的补码形式
         System.out.println(Integer.toBinaryString(num));
     }
 

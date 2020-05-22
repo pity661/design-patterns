@@ -7,8 +7,8 @@ package com.wenky;
  * @create: 2019-03-09 18:11
  **/
 public class MainTest {
-  public static void main(String[] args) {
-    //
-    System.out.println(47 >>> 8);
-  }
+    public static void main(String[] args) {
+        //
+        System.out.println(47 >>> 8);
+    }
 }

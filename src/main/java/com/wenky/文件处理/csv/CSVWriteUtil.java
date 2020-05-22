@@ -13,7 +13,7 @@ public class CSVWriteUtil {
         try {
             File csv = new File("/Users/huwenqi/Desktop/a.csv"); // CSV数据文件
             //BufferedWriter bw = new BufferedWriter(new FileWriter(csv, true)); // 附加
-            BufferedWriter bw =new BufferedWriter(new OutputStreamWriter(new FileOutputStream(csv), "GBK")) ;// 附加
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(csv), "GBK"));// 附加
             // 添加新的数据行
             bw.write("\"李四\"" + "," + "\"1988\"" + "," + "\"1992\"");
             bw.newLine();

@@ -11,23 +11,23 @@ import java.lang.reflect.Method;
  * @create: 2019-06-03 14:57
  */
 public class Person {
-  private String username = "Tom";
+    private String username = "Tom";
 
-  private void playGame() {
-    System.out.println(username + "玩游戏了");
-  }
+    private void playGame() {
+        System.out.println(username + "玩游戏了");
+    }
 
-  public static void main(String[] args)
-      throws NoSuchMethodException, InvocationTargetException, IllegalAccessException,
-          NoSuchFieldException {
-    Person person = new Person();
-    Class c = person.getClass();
-    Method method = c.getDeclaredMethod("playGame");
-    method.setAccessible(true);
-    method.invoke(person);
-    Field field = c.getDeclaredField("username");
-    field.setAccessible(true);
-    field.set(person, "John");
-    method.invoke(person);
-  }
+    public static void main(String[] args)
+            throws NoSuchMethodException, InvocationTargetException, IllegalAccessException,
+            NoSuchFieldException {
+        Person person = new Person();
+        Class c = person.getClass();
+        Method method = c.getDeclaredMethod("playGame");
+        method.setAccessible(true);
+        method.invoke(person);
+        Field field = c.getDeclaredField("username");
+        field.setAccessible(true);
+        field.set(person, "John");
+        method.invoke(person);
+    }
 }

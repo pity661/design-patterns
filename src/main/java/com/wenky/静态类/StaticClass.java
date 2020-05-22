@@ -27,6 +27,7 @@ public class StaticClass {
     // 静态内部类只有在被调用的时候才加载
     static class InnerStaticClass {
         public static long INNER_DATE = System.currentTimeMillis();
+
         static {
             System.out.println("内部静态代码块加载时间:" + System.currentTimeMillis());
         }
@@ -35,19 +36,20 @@ public class StaticClass {
     // 非静态内部类在类初始化的时候初始化构造方法
     class InnerClass {
         public long INNER_DATE = 0;
+
         public InnerClass() {
             INNER_DATE = System.currentTimeMillis();
         }
     }
 
     public static void main(String[] args) {
-    // 外部类加载
-    // StaticClass staticClass = new StaticClass();
+        // 外部类加载
+        // StaticClass staticClass = new StaticClass();
 
-    // 静态内部类加载
-    // System.out.println(StaticClass.InnerStaticClass.INNER_DATE);
+        // 静态内部类加载
+        // System.out.println(StaticClass.InnerStaticClass.INNER_DATE);
 
-    // 非静态内部类加载
-    // System.out.println(new StaticClass().new InnerClass().INNER_DATE);
+        // 非静态内部类加载
+        // System.out.println(new StaticClass().new InnerClass().INNER_DATE);
     }
 }
