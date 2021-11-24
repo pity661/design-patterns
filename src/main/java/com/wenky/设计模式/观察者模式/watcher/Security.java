@@ -8,8 +8,8 @@ package com.wenky.设计模式.观察者模式.watcher;
  */
 public class Security implements Watcher {
 
-    @Override
-    public void update() {
-        System.out.println("我是保镖");
-    }
+  @Override
+  public void update() {
+    System.out.println("我是保镖");
+  }
 }

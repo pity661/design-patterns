@@ -9,12 +9,12 @@ import java.util.function.Consumer;
  * @create: 2019-08-10 11:13
  */
 public class ConsumerTest {
-    public static void main(String[] args) {
-        // 接口定义入参，没有出参
-        // 调用 accept()方法执行
-        Consumer c = p -> System.out.println(p);
-        Consumer s = a -> System.out.println(String.format("a: %s", a));
-        c.accept("ss");
-        s.accept("kk");
-    }
+  public static void main(String[] args) {
+    // 接口定义入参，没有出参
+    // 调用 accept()方法执行
+    Consumer c = p -> System.out.println(p);
+    Consumer s = a -> System.out.println(String.format("a: %s", a));
+    c.accept("ss");
+    s.accept("kk");
+  }
 }

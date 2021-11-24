@@ -7,9 +7,9 @@ import lombok.Data;
  * @description:
  * @author: wenky huwenqi@panda-fintech.com
  * @create: 2019-02-28 18:55
- **/
+ */
 @Data
 public class OtherBaseDO {
-    private String str;
-    private Boolean boo;
+  private String str;
+  private Boolean boo;
 }

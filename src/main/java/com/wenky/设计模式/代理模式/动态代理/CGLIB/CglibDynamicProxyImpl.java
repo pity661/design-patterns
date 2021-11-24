@@ -10,8 +10,8 @@ package com.wenky.设计模式.代理模式.动态代理.CGLIB;
  * @create: 2018-10-22 20:51
  */
 public class CglibDynamicProxyImpl {
-    public void queryInfo() {
-        // TODO Auto-generated method stub
-        System.out.println("代理模式 之 CGLIB的动态代理 -- CglibDynamicProxyImpl类   查看信息...");
-    }
+  public void queryInfo() {
+    // TODO Auto-generated method stub
+    System.out.println("代理模式 之 CGLIB的动态代理 -- CglibDynamicProxyImpl类   查看信息...");
+  }
 }

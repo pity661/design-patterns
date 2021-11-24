@@ -8,19 +8,21 @@ import java.util.TimerTask;
  * @description:
  * @author: wenky huwenqi@panda-fintech.com
  * @create: 2019-07-12 13:46
- **/
+ */
 public class TimerTest {
-    public static void main(String[] args) {
-        //
-        System.out.println(System.currentTimeMillis());
+  public static void main(String[] args) {
+    //
+    System.out.println(System.currentTimeMillis());
 
-        Timer timer = new Timer();
-        timer.schedule(
-                new TimerTask() {
-                    @Override
-                    public void run() {
-                        System.out.println("12321");
-                    }
-                }, 2000, 1000);
-    }
+    Timer timer = new Timer();
+    timer.schedule(
+        new TimerTask() {
+          @Override
+          public void run() {
+            System.out.println("12321");
+          }
+        },
+        2000,
+        1000);
+  }
 }

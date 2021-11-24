@@ -7,39 +7,39 @@ import java.util.regex.Pattern;
  * @description:
  * @author: wenky huwenqi@panda-fintech.com
  * @create: 2019-01-03 14:41
- **/
+ */
 public class MapKey {
-    private static final String REG = "[0-9]+";
+  private static final String REG = "[0-9]+";
 
-    private String key;
+  private String key;
 
-    public MapKey(String key) {
-        this.key = key;
-    }
+  public MapKey(String key) {
+    this.key = key;
+  }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) return true;
 
-        if (obj == null || getClass() != obj.getClass()) return false;
+    if (obj == null || getClass() != obj.getClass()) return false;
 
-        MapKey mapKey = (MapKey) obj;
+    MapKey mapKey = (MapKey) obj;
 
-        return !(key != null ? !key.equals(mapKey.key) : mapKey.key != null);
-        // return (key == null ? mapKey.key == null : key.equals(mapKey.key));
-    }
+    return !(key != null ? !key.equals(mapKey.key) : mapKey.key != null);
+    // return (key == null ? mapKey.key == null : key.equals(mapKey.key));
+  }
 
-    @Override
-    public int hashCode() {
-        if (key == null) return 0;
-        Pattern pattern = Pattern.compile(REG);
-        if (pattern.matcher(key).matches()) return 1;
-        else return 2;
-    }
+  @Override
+  public int hashCode() {
+    if (key == null) return 0;
+    Pattern pattern = Pattern.compile(REG);
+    if (pattern.matcher(key).matches()) return 1;
+    else return 2;
+  }
 
-    @Override
-    public String toString() {
-        return key;
-        // return super.toString();
-    }
+  @Override
+  public String toString() {
+    return key;
+    // return super.toString();
+  }
 }

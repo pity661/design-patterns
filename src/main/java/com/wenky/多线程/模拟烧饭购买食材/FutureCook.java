@@ -9,53 +9,51 @@ import java.util.concurrent.FutureTask;
  * @description:
  * @author: wenky huwenqi@panda-fintech.com
  * @create: 2018-10-27 13:57
- **/
+ */
 public class FutureCook {
 
-    public static void main(String[] args) throws InterruptedException, ExecutionException {
-        long startTime = System.currentTimeMillis(); // 开始时间
+  public static void main(String[] args) throws InterruptedException, ExecutionException {
+    long startTime = System.currentTimeMillis(); // 开始时间
 
-        // 第一步 网购厨具
-        Callable<Chuju> onlineShopping = new Callable<Chuju>() {
-            @Override
-            public Chuju call() throws Exception {
-                System.out.println("第一步：下单");
-                System.out.println("第一步：等待送货");
-                Thread.sleep(5000);  // 模拟送货时间
-                System.out.println("第一步：快递送到");
-                return new Chuju();
-            }
+    // 第一步 网购厨具
+    Callable<Chuju> onlineShopping =
+        new Callable<Chuju>() {
+          @Override
+          public Chuju call() throws Exception {
+            System.out.println("第一步：下单");
+            System.out.println("第一步：等待送货");
+            Thread.sleep(5000); // 模拟送货时间
+            System.out.println("第一步：快递送到");
+            return new Chuju();
+          }
         };
 
-        FutureTask<Chuju> task = new FutureTask<Chuju>(onlineShopping);
-        new Thread(task).start();
-        // 第二步 去超市购买食材
-        Thread.sleep(2000);  // 模拟购买食材时间
-        Shicai shicai = new Shicai();
-        System.out.println("第二步：食材到位");
-        // 第三步 用厨具烹饪食材
-        if (!task.isDone()) {  // 联系快递员，询问是否到货
-            System.out.println("第三步：厨具还没到，心情好就等着（心情不好就调用cancel方法取消订单）");
-        }
-        // 取消task线程的继续执行,若执行get()方法就会抛异常
-        // task.cancel(false);
-
-        // get() 方法有点类似thread的join(),将当前线程挂起直至task返回结果
-        Chuju chuju = task.get();
-        System.out.println("第三步：厨具到位，开始展现厨艺");
-        cook(chuju, shicai);
-        System.out.println("总共用时" + (System.currentTimeMillis() - startTime) + "ms");
+    FutureTask<Chuju> task = new FutureTask<Chuju>(onlineShopping);
+    new Thread(task).start();
+    // 第二步 去超市购买食材
+    Thread.sleep(2000); // 模拟购买食材时间
+    Shicai shicai = new Shicai();
+    System.out.println("第二步：食材到位");
+    // 第三步 用厨具烹饪食材
+    if (!task.isDone()) { // 联系快递员，询问是否到货
+      System.out.println("第三步：厨具还没到，心情好就等着（心情不好就调用cancel方法取消订单）");
     }
+    // 取消task线程的继续执行,若执行get()方法就会抛异常
+    // task.cancel(false);
 
-    //  用厨具烹饪食材
-    static void cook(Chuju chuju, Shicai shicai) {
-    }
+    // get() 方法有点类似thread的join(),将当前线程挂起直至task返回结果
+    Chuju chuju = task.get();
+    System.out.println("第三步：厨具到位，开始展现厨艺");
+    cook(chuju, shicai);
+    System.out.println("总共用时" + (System.currentTimeMillis() - startTime) + "ms");
+  }
 
-    // 厨具类
-    static class Chuju {
-    }
+  //  用厨具烹饪食材
+  static void cook(Chuju chuju, Shicai shicai) {}
 
-    // 食材类
-    static class Shicai {
-    }
+  // 厨具类
+  static class Chuju {}
+
+  // 食材类
+  static class Shicai {}
 }

@@ -7,7 +7,7 @@ package com.wenky.设计模式.工厂模式.抽象工厂模式.product;
  * @create: 2019-08-09 17:33
  */
 public class AirconditionA implements Aircondition {
-    public AirconditionA() {
-        System.out.println("制造-->AirconditionA");
-    }
+  public AirconditionA() {
+    System.out.println("制造-->AirconditionA");
+  }
 }

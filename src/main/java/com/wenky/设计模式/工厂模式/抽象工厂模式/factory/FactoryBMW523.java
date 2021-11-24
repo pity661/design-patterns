@@ -13,13 +13,13 @@ import com.wenky.设计模式.工厂模式.抽象工厂模式.product.EngineB;
  */
 public class FactoryBMW523 implements AbstractFactory {
 
-    @Override
-    public Engine createEngine() {
-        return new EngineB();
-    }
+  @Override
+  public Engine createEngine() {
+    return new EngineB();
+  }
 
-    @Override
-    public Aircondition createAircondition() {
-        return new AirconditionB();
-    }
+  @Override
+  public Aircondition createAircondition() {
+    return new AirconditionB();
+  }
 }

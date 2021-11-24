@@ -1,13 +1,12 @@
 package com.wenky.设计模式.代理模式.动态代理.CGLIB;
 
-
 /**
  * @program: design-patterns
  * @description:
  * @author: wenky huwenqi@panda-fintech.com
  * @create: 2018-10-22 20:52
- **/
-//public class CglibDynamicProxy implements MethodInterceptor {
+ */
+// public class CglibDynamicProxy implements MethodInterceptor {
 //    // 目标实现类，也就是某个接口的实现类，这里的target_interface_implements，可以看做是一种抽象
 //    private Object target_class;
 //    // 创建代理对象
@@ -21,7 +20,8 @@ package com.wenky.设计模式.代理模式.动态代理.CGLIB;
 //        return enhancer.create();
 //    }
 //    // 回调方法
-//    public Object intercept(Object arg0, Method arg1, Object[] arg2, MethodProxy proxy) throws Throwable {
+//    public Object intercept(Object arg0, Method arg1, Object[] arg2, MethodProxy proxy) throws
+// Throwable {
 //        // 事务处理之前，可以执行一段代码
 //        System.out.println("事务处理之前...");
 //        // 执行方法
@@ -32,7 +32,8 @@ package com.wenky.设计模式.代理模式.动态代理.CGLIB;
 //    }
 //
 //    @Override
-//    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+//    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy)
+// throws Throwable {
 //        return null;
 //    }
-//}
+// }
